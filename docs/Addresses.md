@@ -16,5 +16,5 @@ Name | Type | Description | Notes
 **name** | **String** |  |  [optional]
 **postalCode** | **String** |  |  [optional]
 **streetName** | **String** |  |  [optional]
-**streetNumber** | **Long** |  |  [optional]
+**streetNumber** | **String** |  |  [optional]
 **telephone** | **String** |  |  [optional]
