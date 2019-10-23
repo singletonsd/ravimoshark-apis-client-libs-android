@@ -1,0 +1,19 @@
+image: ${JAVA_MAIN_IMAGE_NAME}:${JAVA_MAIN_IMAGE_TAG}
+
+# https://gitlab.com/singletonsd/pipelines/java
+include:
+  - project: 'singletonsd/pipelines/java'
+    file: '/src/.gitlab-ci-main.yml'
+
+variables:
+  JAVA_MAIN_IMAGE_NAME: "maven"
+  JAVA_MAIN_IMAGE_TAG: "3.5.2-jdk-8"
+  JAVA_MAIN_EXECUTE_TEST: "true" # To execute test.
+  JAVA_MAIN_EXECUTE_DEPLOY: "true" # To deploy to maven.
+  ORIGINAL_REPOSITORY: "ravimosharksas/apis/client/libs/android"
+
+stages:
+  - build
+  - test
+  - deploy
+  - package
