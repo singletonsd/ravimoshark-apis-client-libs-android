@@ -5,7 +5,7 @@
   <artifactId>client</artifactId>
   <packaging>jar</packaging>
   <name>client</name>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
   <url>https://gitlab.com/ravimosharksas/apis/client/libs/android.git</url>
   <description>Ravimoshark Client API android library</description>
   <scm>
@@ -140,6 +140,22 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <finalName>${project.groupId}${project.artifactId}-${project.version}</finalName>
+        </configuration>
       </plugin>
     </plugins>
   </build>

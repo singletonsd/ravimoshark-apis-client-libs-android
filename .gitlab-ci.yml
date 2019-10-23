@@ -9,7 +9,7 @@ variables:
   JAVA_MAIN_IMAGE_NAME: "maven"
   JAVA_MAIN_IMAGE_TAG: "3.5.2-jdk-8"
   JAVA_MAIN_EXECUTE_TEST: "true" # To execute test.
-  JAVA_MAIN_EXECUTE_DEPLOY: "true" # To deploy to maven.
+  JAVA_MAIN_EXECUTE_DEPLOY: "false" # To deploy to maven.
   ORIGINAL_REPOSITORY: "ravimosharksas/apis/client/libs/android"
 
 stages:
