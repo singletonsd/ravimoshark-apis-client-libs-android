@@ -236,6 +236,26 @@ Authentication schemes defined for the API:
 
 It's recommended to create an instance of `ApiClient` per thread in a multi-threaded environment to avoid any potential issues.
 
+## Generate
+
+To regenerate the library from spec, first create a .env file with the following content:
+
+```bash
+SWAGGER_API_SPEC="" #Default value: ../../documentation/dist/openapi.yaml
+SWAGGER_GROUP="" #MANDATORY FIELD
+SWAGGER_ARTIFACT="" #MANDATORY FIELD
+```
+
+And then just execute the following script:
+
+```bash
+mkdir -p scripts && \
+curl -o scripts/swagger_binaries_downloader.sh -L https://singletonsd.gitlab.io/scripts/swagger/latest/swagger_binaries_downloader.sh && \
+curl -o scripts/swagger_generate_android.sh -L https://singletonsd.gitlab.io/scripts/swagger/latest/swagger_generate_android.sh && \
+chmod +x scripts/swagger_binaries_downloader.sh scripts/swagger_generate_android.sh && \
+./scripts/swagger_generate_android.sh
+```
+
 ----------------------
 
 © [Singleton SD](http://singletonsd.com), France, 2019.
