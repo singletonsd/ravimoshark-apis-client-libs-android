@@ -26,7 +26,7 @@ import java.io.Serializable;
  * CustomError
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-23T10:35:25.141+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-23T17:20:27.874+02:00[Europe/Paris]")
 public class CustomError implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("code")
