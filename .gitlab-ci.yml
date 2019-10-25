@@ -15,5 +15,5 @@ variables:
 stages:
   - build
   - test
-  - deploy
   - package
+  - deploy
